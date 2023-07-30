@@ -1,0 +1,29 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(241, 194, 175);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #a8ec2a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .logo {
+    max-width: 200px;
+    margin: 20px auto;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }

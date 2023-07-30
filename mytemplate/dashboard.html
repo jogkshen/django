@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Confirm Password</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample Data -->
+        
+        {% for i in obj %}
+        <!-- Sample Data -->
+        <tr>
+            <td> {{i.id}}</td>
+            <td>  {{i.fullname}}</td>
+            <td>  {{i.email}}</td>
+            <td>  {{i.password}}</td>
+            <td>  {{i.confirm_password}}</td>
+            <td> <img src="{{i.photo.url}}" height="100px" width="100px"> </td>
+            <td class="action-buttons">
+              <a href="{% url 'registerupdate' i.id %}">update</a>
+              <a href="{% url 'registerdelete' i.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript functions for handling update and delete actions
+        function updateUser(userId) {
+            // Implement the logic for updating a user with the given userId
+            console.log('Updating user with ID:', userId);
+        }
+
+        function deleteUser(userId) {
+            // Implement the logic for deleting a user with the given userId
+            console.log('Deleting user with ID:', userId);
+        }
+    </script>
+</body>
+</html>
